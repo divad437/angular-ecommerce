@@ -8,5 +8,9 @@ import { PrimaryButtonComponent } from "../primary-button/primary-button.compone
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  showButtonClicked() {
+    console.log('Button Clicked');
+  }
   title = signal('My Ecommerce Site');
 }

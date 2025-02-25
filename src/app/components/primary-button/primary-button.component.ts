@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-primary-button',
@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './primary-button.component.scss'
 })
 export class PrimaryButtonComponent {
+  label = input('');
 
+  btnClicked = output();
+
+  handleButtonClick() {
+    this.btnClicked.emit();
+  }
 }
