@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Product } from '../../models/products.model';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @Component({
   selector: 'app-products-list',
-  imports: [],
+  imports: [ProductCardComponent],
   templateUrl: './products-list.component.html',
   styleUrl: './products-list.component.scss'
 })
@@ -35,7 +36,7 @@ export class ProductsListComponent {
       title: "Écouteurs sans fil AirPods Pro (2e génération)",
       image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_SL1500_.jpg",
       price: 249.99,
-      stock: 20
+      stock: 0
     }
   ]);
 }
